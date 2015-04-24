@@ -21,6 +21,8 @@ class ViewController: UIViewController {
         let myComponents = myCalendar.components(NSCalendarUnit.CalendarUnitHour | NSCalendarUnit.CalendarUnitDay | NSCalendarUnit.CalendarUnitWeekOfMonth, fromDate: today)
         
         let weekDay = myComponents.weekOfMonth
+        
+        // this can be computed as well
         println((myComponents.day - 1 ) / 7 + 1 )
         
         println(weekDay)
