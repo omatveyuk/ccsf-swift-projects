@@ -11,6 +11,8 @@ import CoreLocation
 
 class ViewController: UIViewController,UIApplicationDelegate, CLLocationManagerDelegate {
     
+    var searchTask: NSURLSessionDataTask?
+
     var today = NSDate()
     var days : [String] = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     
@@ -90,6 +92,40 @@ class ViewController: UIViewController,UIApplicationDelegate, CLLocationManagerD
             
             println(coord.latitude)
             println(coord.longitude)
+            
+            let loc = "\(coord.latitude),\(coord.longitude)"
+            // start here
+            
+            // Start a new one download
+            let resource = BingLocationDB.Resources.SearchPerson
+            let parameters = [BingLocationDB.Keys.ID : loc]
+            
+            BingLocationDB.sharedInstance().taskForResource(resource, parameters: parameters){ JSONResult, error  in
+                
+                // Handle the error case
+                if let error = error {
+                    println("Error searching for actors: \(error.localizedDescription)")
+                    return
+                }
+                
+                if let moviesDictionaries = JSONResult.valueForKey("resourceSets") as? [[String : AnyObject]] {
+                
+                
+                }
+                
+                
+                
+            }
+
+            
+            // end here
+            
+            
+            
+            
+            
+            
+            
         }
     }
     

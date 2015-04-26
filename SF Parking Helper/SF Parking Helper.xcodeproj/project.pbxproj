@@ -13,6 +13,8 @@
 		EE78E4901AEA81560002D5F4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE78E48F1AEA81560002D5F4 /* Images.xcassets */; };
 		EE78E4931AEA81560002D5F4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE78E4911AEA81560002D5F4 /* LaunchScreen.xib */; };
 		EE78E49F1AEA81560002D5F4 /* SF_Parking_HelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78E49E1AEA81560002D5F4 /* SF_Parking_HelperTests.swift */; };
+		EEEAA2F81AEC643F00B1D0BF /* BingLocationDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEAA2F71AEC643F00B1D0BF /* BingLocationDB.swift */; };
+		EEEAA2FA1AEC650200B1D0BF /* BingLocation-Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEAA2F91AEC650200B1D0BF /* BingLocation-Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		EE78E4981AEA81560002D5F4 /* SF Parking HelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SF Parking HelperTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE78E49D1AEA81560002D5F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE78E49E1AEA81560002D5F4 /* SF_Parking_HelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SF_Parking_HelperTests.swift; sourceTree = "<group>"; };
+		EEEAA2F71AEC643F00B1D0BF /* BingLocationDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingLocationDB.swift; sourceTree = "<group>"; };
+		EEEAA2F91AEC650200B1D0BF /* BingLocation-Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BingLocation-Constants.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				EE78E48F1AEA81560002D5F4 /* Images.xcassets */,
 				EE78E4911AEA81560002D5F4 /* LaunchScreen.xib */,
 				EE78E4861AEA81560002D5F4 /* Supporting Files */,
+				EEEAA2F71AEC643F00B1D0BF /* BingLocationDB.swift */,
+				EEEAA2F91AEC650200B1D0BF /* BingLocation-Constants.swift */,
 			);
 			path = "SF Parking Helper";
 			sourceTree = "<group>";
@@ -214,6 +220,8 @@
 			files = (
 				EE78E48B1AEA81560002D5F4 /* ViewController.swift in Sources */,
 				EE78E4891AEA81560002D5F4 /* AppDelegate.swift in Sources */,
+				EEEAA2FA1AEC650200B1D0BF /* BingLocation-Constants.swift in Sources */,
+				EEEAA2F81AEC643F00B1D0BF /* BingLocationDB.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +417,7 @@
 				EE78E4A41AEA81560002D5F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EE78E4A51AEA81560002D5F4 /* Build configuration list for PBXNativeTarget "SF Parking HelperTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +426,7 @@
 				EE78E4A71AEA81560002D5F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
