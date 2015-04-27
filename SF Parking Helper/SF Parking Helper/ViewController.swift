@@ -16,6 +16,8 @@ class ViewController: UIViewController,UIApplicationDelegate, CLLocationManagerD
     var today = NSDate()
     var days : [String] = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     
+    var weekNumbers : [String] = ["First", "Second", "Third", "Fourth", "Fifth"]
+    
     
     
     var lastLocation = CLLocation()
@@ -27,6 +29,7 @@ class ViewController: UIViewController,UIApplicationDelegate, CLLocationManagerD
     var locationStatus : NSString = "Not Started"
 
     
+    @IBOutlet weak var LabelLocation: UILabel!
     @IBOutlet weak var Label: UILabel!
     
     override func viewDidLoad() {
@@ -43,7 +46,7 @@ class ViewController: UIViewController,UIApplicationDelegate, CLLocationManagerD
         println((myComponents.day - 1 ) / 7 + 1 )
         
         println(weekDay)
-        Label.text = "Today is \(weekDay) \(days[myComponents.weekday-1]) of the Month"
+        Label.text = "Today is \(weekNumbers[weekDay-1]) \(days[myComponents.weekday-1]) of the Month"
     }
     
     override func didReceiveMemoryWarning() {
@@ -92,6 +95,7 @@ class ViewController: UIViewController,UIApplicationDelegate, CLLocationManagerD
             
             println(coord.latitude)
             println(coord.longitude)
+            // lasteJson()
             
             let loc = "\(coord.latitude),\(coord.longitude)"
             // start here
@@ -108,15 +112,26 @@ class ViewController: UIViewController,UIApplicationDelegate, CLLocationManagerD
                     return
                 }
                 
-                if let moviesDictionaries = JSONResult.valueForKey("resourceSets") as? [[String : AnyObject]] {
-                
-                
+                if let books = JSONResult["resourceSets"] as? Array<Dictionary<String, AnyObject>> {
+                    if books.count > 0{
+                        if let books1 = books[0]["resources"] as? Array<Dictionary<String, AnyObject>>{
+                            if books1.count > 0 {
+                                if let books2 = books1[0]["name"] as? String {
+                                    dispatch_async(dispatch_get_main_queue()) {
+                                        self.LabelLocation.text = books2
+                                    }
+                                }
+                                
+                            }
+                        }
+                    }
                 }
+
+                
                 
                 
                 
             }
-
             
             // end here
             
@@ -153,5 +168,49 @@ class ViewController: UIViewController,UIApplicationDelegate, CLLocationManagerD
         }
     }
     
+    
+    func lasteJson(){
+        let urlPath = "http://dev.virtualearth.net/REST/v1/Locations/37.785834,-122.406417?key=Aoz5aNfanNaMxDdBD87NokA3PUMtrCcG-sxAZIxsCaKaE7oqrHaisGbXNBYMiNw2&o=json"
+        let url: NSURL = NSURL(string: urlPath)!
+        let session = NSURLSession.sharedSession()
+        
+        var questionsArray=[Question]()
+        
+        let task = session.dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
+            if error != nil {
+                // If there is an error in the web request, print it to the console
+                println(error.localizedDescription)
+            }
+            else {
+                var err: NSError?
+                var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as! NSDictionary
+                
+                
+                
+                if err != nil {
+                    // If there is an error parsing JSON, print it to the console
+                    println("JSON Error \(err!.localizedDescription)")
+                }
+                else {
+                    let books = jsonResult["resourceSets"] as! Array<Dictionary<String, AnyObject>>
+                    let books1 = books[0]["resources"] as! Array<Dictionary<String, AnyObject>>
+                    let books2 = books1[0]["name"] as! String
+                    
+                    
+                    if let questions = jsonResult["resourceSets"] as? [[String:AnyObject]]{
+                        // let q2 = questions["resources"]
+                        println(questions)
+                    }
+                    
+                    
+                    }
+                    
+                
+            }
+        })
+        
+        task.resume()
+        
+    }
 }
 

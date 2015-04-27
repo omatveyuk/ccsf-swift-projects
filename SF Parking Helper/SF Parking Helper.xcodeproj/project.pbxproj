@@ -15,6 +15,7 @@
 		EE78E49F1AEA81560002D5F4 /* SF_Parking_HelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78E49E1AEA81560002D5F4 /* SF_Parking_HelperTests.swift */; };
 		EEEAA2F81AEC643F00B1D0BF /* BingLocationDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEAA2F71AEC643F00B1D0BF /* BingLocationDB.swift */; };
 		EEEAA2FA1AEC650200B1D0BF /* BingLocation-Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEAA2F91AEC650200B1D0BF /* BingLocation-Constants.swift */; };
+		EEEAA2FC1AECA81100B1D0BF /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEAA2FB1AECA81100B1D0BF /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		EE78E49E1AEA81560002D5F4 /* SF_Parking_HelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SF_Parking_HelperTests.swift; sourceTree = "<group>"; };
 		EEEAA2F71AEC643F00B1D0BF /* BingLocationDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingLocationDB.swift; sourceTree = "<group>"; };
 		EEEAA2F91AEC650200B1D0BF /* BingLocation-Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BingLocation-Constants.swift"; sourceTree = "<group>"; };
+		EEEAA2FB1AECA81100B1D0BF /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				EE78E4861AEA81560002D5F4 /* Supporting Files */,
 				EEEAA2F71AEC643F00B1D0BF /* BingLocationDB.swift */,
 				EEEAA2F91AEC650200B1D0BF /* BingLocation-Constants.swift */,
+				EEEAA2FB1AECA81100B1D0BF /* Question.swift */,
 			);
 			path = "SF Parking Helper";
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEEAA2FC1AECA81100B1D0BF /* Question.swift in Sources */,
 				EE78E48B1AEA81560002D5F4 /* ViewController.swift in Sources */,
 				EE78E4891AEA81560002D5F4 /* AppDelegate.swift in Sources */,
 				EEEAA2FA1AEC650200B1D0BF /* BingLocation-Constants.swift in Sources */,
