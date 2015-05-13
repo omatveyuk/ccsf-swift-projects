@@ -52,8 +52,8 @@ class FillUpHistoryViewController : UITableViewController, FooTwoViewControllerD
         cell.timestampLabel.text = "Fillup date: \(components.month)-\(components.day)-\(components.year)"
 
         
-        cell.namedLabel.text = "Miles: \(actor.totalMiles) \t Price per mile: " + String(format:"%.2f", (actor.totalPrice / actor.totalMiles))
-        cell.totalGallons.text = "Price: \(actor.totalPrice) \t Gallons: \((actor.totalPrice / actor.pricePerGallon))"
+        cell.namedLabel.text = "Miles: \(actor.totalMiles) \t Price per mile: $" + String(format:"%.1f", (actor.totalPrice / actor.totalMiles))
+        cell.totalGallons.text = "Price: $\(actor.totalPrice) \t Gallons: " + String(format: "%.2f", (actor.totalPrice / actor.pricePerGallon))
         
         return cell
     }
