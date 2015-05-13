@@ -14,4 +14,8 @@ class ActorTableViewCell : TaskCancelingTableViewCell {
     //@IBOutlet var actorImageView: UIImageView!
 
     @IBOutlet weak var namedLabel: UILabel!
+    @IBOutlet weak var totalGallons: UILabel!
+    @IBOutlet weak var timestampLabel: UILabel!
+    @IBOutlet weak var totalMiles: UILabel!
+    @IBOutlet weak var totalPrice: UILabel!
 }

@@ -23,8 +23,11 @@ class FillUpViewController : UIViewController{
             // delegate!.myVCDidFinish(self, text: "misha birman")
         }
     }
-    var temp = FillUp(x: 0.0, y: 0.0)
+    var temp = FillUp(tp: 0.0, tm: 0.0, pg: 0.0)
     
+    @IBOutlet weak var pricePerMile: UILabel!
+    @IBOutlet weak var totalGallons: UILabel!
+    @IBOutlet weak var pricePerGallon: UITextField!
     @IBOutlet weak var totalPrice: UITextField!
     @IBOutlet weak var totalMiles: UITextField!
     
@@ -38,8 +41,14 @@ class FillUpViewController : UIViewController{
     
     func saveFillUp(){
         
+        temp.timestamp = NSDate()
         temp.totalMiles=Double((totalMiles.text as NSString).doubleValue)
         temp.totalPrice = Double((totalPrice.text as NSString).doubleValue)
+        temp.pricePerGallon = Double((pricePerGallon.text as NSString).doubleValue)
+        
+        var c:String = String(format:"%.2f", (temp.totalPrice / temp.totalMiles))
+        
+        self.pricePerMile.text = c
         
         println("Price per mile is \(temp.totalPrice / temp.totalMiles)")
         //dismissViewControllerAnimated(true, completion: nil)

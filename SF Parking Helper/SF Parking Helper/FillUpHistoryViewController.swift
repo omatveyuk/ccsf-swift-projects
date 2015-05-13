@@ -15,10 +15,6 @@ class FillUpHistoryViewController : UITableViewController, FooTwoViewControllerD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var t = FillUp(x:0.0, y:0.0)
-        t.totalMiles = 1000
-        t.totalPrice = 200
-        self.history.append(t)
         
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "addFillUp")
@@ -43,8 +39,21 @@ class FillUpHistoryViewController : UITableViewController, FooTwoViewControllerD
         let CellIdentifier = "Cell"
         let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as! ActorTableViewCell
         
-        cell.textLabel?.text = (actor.totalPrice / actor.totalMiles).description
+        //cell.textLabel?.text = (actor.totalPrice / actor.totalMiles).description
         
+        
+        let myCalendar = NSCalendar.currentCalendar()
+        let components = myCalendar.components(NSCalendarUnit.CalendarUnitHour | NSCalendarUnit.CalendarUnitDay | NSCalendarUnit.CalendarUnitDay | NSCalendarUnit.CalendarUnitMonth | NSCalendarUnit.CalendarUnitYear, fromDate: actor.timestamp)
+        
+        //let flags: NSCalendarUnit = .DayCalendarUnit | .MonthCalendarUnit | .YearCalendarUnit
+        // let components = NSCalendar.currentCalendar().components(myComponents, fromDate: actor.timestamp)
+
+        
+        cell.timestampLabel.text = "Fillup date: \(components.month)-\(components.day)-\(components.year)"
+
+        
+        cell.namedLabel.text = "Miles: \(actor.totalMiles) \t Price per mile: " + String(format:"%.2f", (actor.totalPrice / actor.totalMiles))
+        cell.totalGallons.text = "Price: \(actor.totalPrice) \t Gallons: \((actor.totalPrice / actor.pricePerGallon))"
         
         return cell
     }

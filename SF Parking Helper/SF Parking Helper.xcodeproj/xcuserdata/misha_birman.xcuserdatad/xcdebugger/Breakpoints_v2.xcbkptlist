@@ -330,7 +330,7 @@
                   moduleName = "SF Parking Helper"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/misha_birman/Documents/ccsf/ccsf-swift-projects/SF%20Parking%20Helper/SF%20Parking%20Helper/ViewController.swift"
-                  timestampString = "453228944.452541"
+                  timestampString = "453233151.367969"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "51"
@@ -345,7 +345,7 @@
                   moduleName = "SF Parking Helper"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/misha_birman/Documents/ccsf/ccsf-swift-projects/SF%20Parking%20Helper/SF%20Parking%20Helper/ViewController.swift"
-                  timestampString = "453228944.452935"
+                  timestampString = "453233151.368158"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "52"
@@ -378,7 +378,7 @@
                   moduleName = "SF Parking Helper"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/misha_birman/Documents/ccsf/ccsf-swift-projects/SF%20Parking%20Helper/SF%20Parking%20Helper/ViewController.swift"
-                  timestampString = "453228944.454104"
+                  timestampString = "453233151.369338"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "100"
@@ -393,7 +393,7 @@
                   moduleName = "SF Parking Helper"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/misha_birman/Documents/ccsf/ccsf-swift-projects/SF%20Parking%20Helper/SF%20Parking%20Helper/ViewController.swift"
-                  timestampString = "453228944.454419"
+                  timestampString = "453233151.369517"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "100"
@@ -474,11 +474,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FillUpViewController.swift"
-            timestampString = "453185604.106192"
+            timestampString = "453230369.324875"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -506,11 +506,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SF Parking Helper/FillUpHistoryViewController.swift"
-            timestampString = "453228884.1713"
+            timestampString = "453232879.03595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "myVCDidFinish(_:text:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -522,29 +522,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SF Parking Helper/FillUpHistoryViewController.swift"
-            timestampString = "453228884.1713"
+            timestampString = "453232879.03595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "FillUpHistoryViewController"
             landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SF Parking Helper/FillUp.swift"
-            timestampString = "453217356.491343"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "encodeWithCoder(_:)"
-            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -638,6 +622,38 @@
                   offsetFromSymbolStart = "246">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FillUpViewController.swift"
+            timestampString = "453231087.304338"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "saveFillUp()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SF Parking Helper/FillUpHistoryViewController.swift"
+            timestampString = "453232879.03595"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
