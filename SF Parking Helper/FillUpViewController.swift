@@ -23,7 +23,7 @@ class FillUpViewController : UIViewController{
             // delegate!.myVCDidFinish(self, text: "misha birman")
         }
     }
-    var temp = FillUp()
+    var temp = FillUp(x: 0.0, y: 0.0)
     
     @IBOutlet weak var totalPrice: UITextField!
     @IBOutlet weak var totalMiles: UITextField!
@@ -41,7 +41,7 @@ class FillUpViewController : UIViewController{
         temp.totalMiles=Double((totalMiles.text as NSString).doubleValue)
         temp.totalPrice = Double((totalPrice.text as NSString).doubleValue)
         
-        println("Price per mile is \(temp.totalPrice! / temp.totalMiles!)")
+        println("Price per mile is \(temp.totalPrice / temp.totalMiles)")
         //dismissViewControllerAnimated(true, completion: nil)
         
         println("Save")

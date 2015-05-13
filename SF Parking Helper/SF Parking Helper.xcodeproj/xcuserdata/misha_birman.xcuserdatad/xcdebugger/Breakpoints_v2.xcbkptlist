@@ -330,7 +330,7 @@
                   moduleName = "SF Parking Helper"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/misha_birman/Documents/ccsf/ccsf-swift-projects/SF%20Parking%20Helper/SF%20Parking%20Helper/ViewController.swift"
-                  timestampString = "453186648.510656"
+                  timestampString = "453228944.452541"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "51"
@@ -345,7 +345,7 @@
                   moduleName = "SF Parking Helper"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/misha_birman/Documents/ccsf/ccsf-swift-projects/SF%20Parking%20Helper/SF%20Parking%20Helper/ViewController.swift"
-                  timestampString = "453186648.510822"
+                  timestampString = "453228944.452935"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "52"
@@ -378,7 +378,7 @@
                   moduleName = "SF Parking Helper"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/misha_birman/Documents/ccsf/ccsf-swift-projects/SF%20Parking%20Helper/SF%20Parking%20Helper/ViewController.swift"
-                  timestampString = "453186648.511626"
+                  timestampString = "453228944.454104"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "100"
@@ -393,7 +393,7 @@
                   moduleName = "SF Parking Helper"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/misha_birman/Documents/ccsf/ccsf-swift-projects/SF%20Parking%20Helper/SF%20Parking%20Helper/ViewController.swift"
-                  timestampString = "453186648.511754"
+                  timestampString = "453228944.454419"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "100"
@@ -497,6 +497,147 @@
             endingLineNumber = "13"
             landmarkName = "FillUpHistoryViewController"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SF Parking Helper/FillUpHistoryViewController.swift"
+            timestampString = "453228884.1713"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "myVCDidFinish(_:text:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SF Parking Helper/FillUpHistoryViewController.swift"
+            timestampString = "453228884.1713"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "FillUpHistoryViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SF Parking Helper/FillUp.swift"
+            timestampString = "453217356.491343"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "encodeWithCoder(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FillUpViewController.swift"
+            timestampString = "453216689.464606"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "FillUpViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SF_Parking_Helper.FillUpViewController.temp.getter : SF_Parking_Helper.FillUp"
+                  moduleName = "SF Parking Helper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/misha_birman/Documents/ccsf/ccsf-swift-projects/SF%20Parking%20Helper/FillUpViewController.swift"
+                  timestampString = "453217357.070375"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SF_Parking_Helper.FillUpViewController.temp.setter : SF_Parking_Helper.FillUp"
+                  moduleName = "SF Parking Helper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/misha_birman/Documents/ccsf/ccsf-swift-projects/SF%20Parking%20Helper/FillUpViewController.swift"
+                  timestampString = "453217357.070737"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SF_Parking_Helper.FillUpViewController.temp.materializeForSet : SF_Parking_Helper.FillUp"
+                  moduleName = "SF Parking Helper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/misha_birman/Documents/ccsf/ccsf-swift-projects/SF%20Parking%20Helper/FillUpViewController.swift"
+                  timestampString = "453217357.070905"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SF_Parking_Helper.FillUpViewController.init (SF_Parking_Helper.FillUpViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; SF_Parking_Helper.FillUpViewController"
+                  moduleName = "SF Parking Helper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/misha_birman/Documents/ccsf/ccsf-swift-projects/SF%20Parking%20Helper/FillUpViewController.swift"
+                  timestampString = "453217357.071057"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "322">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SF_Parking_Helper.FillUpViewController.init (SF_Parking_Helper.FillUpViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; SF_Parking_Helper.FillUpViewController"
+                  moduleName = "SF Parking Helper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/misha_birman/Documents/ccsf/ccsf-swift-projects/SF%20Parking%20Helper/FillUpViewController.swift"
+                  timestampString = "453217357.07121"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "246">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

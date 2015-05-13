@@ -15,13 +15,17 @@ class FillUpHistoryViewController : UITableViewController, FooTwoViewControllerD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var t = FillUp()
+        var t = FillUp(x:0.0, y:0.0)
         t.totalMiles = 1000
         t.totalPrice = 200
         self.history.append(t)
         
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "addFillUp")
+        
+        if let fillUpHistoryArray = NSKeyedUnarchiver.unarchiveObjectWithFile(actorArrayFile.path!) as? [FillUp] {
+            history = fillUpHistoryArray
+        }
 
     }
     
@@ -39,7 +43,7 @@ class FillUpHistoryViewController : UITableViewController, FooTwoViewControllerD
         let CellIdentifier = "Cell"
         let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as! ActorTableViewCell
         
-        cell.textLabel?.text = (actor.totalPrice! / actor.totalMiles!).description
+        cell.textLabel?.text = (actor.totalPrice / actor.totalMiles).description
         
         
         return cell
@@ -56,7 +60,19 @@ class FillUpHistoryViewController : UITableViewController, FooTwoViewControllerD
             self.tableView.reloadData()
         }
 
+        NSKeyedArchiver.archiveRootObject(self.history, toFile: actorArrayFile.path!)
     }
+    
+    
+    lazy var documentsDirectoryURL: NSURL = {
+        return NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0] as! NSURL
+        }()
+    
+    lazy var actorArrayFile: NSURL = {
+        return self.documentsDirectoryURL.URLByAppendingPathComponent("actorsFile")
+        }()
+    
+
     
     func addFillUp() {
         
@@ -70,6 +86,13 @@ class FillUpHistoryViewController : UITableViewController, FooTwoViewControllerD
         //presentViewController(controller, animated: true, completion: nil)
         self.navigationController!.pushViewController(controller, animated: true)
         
+    }
+    
+    var actorArrayURL: NSURL {
+        let filename = "favoriteActorsArray"
+        let documentsDirectoryURL: NSURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first as! NSURL
+        
+        return documentsDirectoryURL.URLByAppendingPathComponent(filename)
     }
 
 }
