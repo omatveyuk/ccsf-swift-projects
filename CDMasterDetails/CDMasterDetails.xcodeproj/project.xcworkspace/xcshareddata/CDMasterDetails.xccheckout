@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>9FFB02C3-242D-4D96-B8CF-3C3FCFCD77BD</string>
+	<string>CEF22D6D-B602-4261-A8C8-9B4EC05D9373</string>
 	<key>IDESourceControlProjectName</key>
-	<string>SF Parking Helper</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>18B7ECFC4D457DC2C3BFA0B89DD79DACE9638373</key>
 		<string>https://github.com/omatveyuk/ccsf-swift-projects.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>SF Parking Helper/SF Parking Helper.xcodeproj</string>
+	<string>CDMasterDetails/CDMasterDetails.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>18B7ECFC4D457DC2C3BFA0B89DD79DACE9638373</key>

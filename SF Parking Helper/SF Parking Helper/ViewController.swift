@@ -11,6 +11,9 @@ import CoreLocation
 
 class ViewController: UIViewController,UIApplicationDelegate, CLLocationManagerDelegate {
     
+     
+    @IBOutlet weak var debugLabel: UILabel!
+    @IBOutlet weak var refreshButton: UIButton!
     var searchTask: NSURLSessionDataTask?
 
     var today = NSDate()
@@ -18,22 +21,120 @@ class ViewController: UIViewController,UIApplicationDelegate, CLLocationManagerD
     
     var weekNumbers : [String] = ["First", "Second", "Third", "Fourth", "Fifth"]
     
-    
-    
+    @IBOutlet weak var LabelLocation: UILabel!
     var lastLocation = CLLocation()
     var locationAuthorizationStatus:CLAuthorizationStatus!
     var window: UIWindow?
-    var locationManager: CLLocationManager!
+    
     var seenError : Bool = false
     var locationFixAchieved : Bool = false
     var locationStatus : NSString = "Not Started"
-
     
-    @IBOutlet weak var LabelLocation: UILabel!
     @IBOutlet weak var Label: UILabel!
+    
+    @IBOutlet weak var refreshActivityIndicator: UIActivityIndicatorView!
+    
+    func endEditingNow(){
+        //activityIndicatorView.startAnimating()
+        //delegate.locationManager.startUpdatingLocation()
+        
+        // delegate.locationManager.stopUpdatingLocation()
+        //activityIndicatorView.stopAnimating()
+        if let isAnimating = refreshActivityIndicator?.isAnimating() {
+            println("Animating")
+        }
+        
+    }
+    
+    func getCurrentLocationData() -> Void {
+        // LocationManager.sharedInstance.autoUpdate = true
+        LocationManager.sharedInstance.startUpdatingLocationWithCompletionHandler { (latitude, longitude, status, verboseMessage, error) -> () in
+            if (error == nil){
+                LocationManager.sharedInstance.reverseGeocodeLocationWithLatLon(latitude: latitude, longitude:longitude, onReverseGeocodingCompletionHandler: { (reverseGecodeInfo, placemark, error) -> Void in
+                    if (error == nil){
+                        if let x = reverseGecodeInfo?["formattedAddress"] as? NSString {
+                            
+                            
+                            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                                self.LabelLocation.text = x as String
+                                let now = NSDate()
+                                self.debugLabel.text = "\(latitude) \(longitude) \(now)"
+                                
+                                
+                                //Stop refresh animation
+                                self.refreshActivityIndicator.stopAnimating()
+                                self.refreshActivityIndicator.hidden = true
+                                self.refreshButton.hidden = false
+                            })
+                        }
+                    }else{
+                        println(error)
+                        let networkIssueController = UIAlertController(title: "Error", message: "Unable to load data. Connectivity error", preferredStyle: .Alert)
+                        let okButton = UIAlertAction    (title: "OK", style: .Default, handler: nil)
+                        networkIssueController.addAction(okButton)
+                        
+                        
+                        let cancelButton = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+                        networkIssueController.addAction(cancelButton)
+                            
+                        self.presentViewController(networkIssueController, animated: true, completion: nil)
+                        
+                        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                            //Stop refresh animation
+                            self.refreshActivityIndicator.stopAnimating()
+                            self.refreshActivityIndicator.hidden = true
+                            self.refreshButton.hidden = false
+                        
+                        })
+                    }
+                
+                })
+            }else{
+                println(error)
+                let networkIssueController = UIAlertController(title: "Error", message: "Unable to load data. Connectivity error", preferredStyle: .Alert)
+                
+                self.presentViewController(networkIssueController, animated: true, completion: nil)
+                
+                
+            }
+        }
+    }
+    
+    
+    
+    @IBAction func refresh() {
+        getCurrentLocationData()
+        
+        refreshButton.hidden = true
+        refreshActivityIndicator.hidden = false
+        refreshActivityIndicator.startAnimating()
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        //self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "addActor")
+        //self.navigationItem.rightBarButtonItem = UIBarButtonItem (title: "Refresh", style: UIBarButtonItemStyle.Bordered, target: self, action: Selector("endEditingNow"))
+            
+        refreshActivityIndicator.hidden = true
+        
+        getCurrentLocationData()
+
+        
+        
+        
+        let buttonEdit: UIButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+        buttonEdit.frame = CGRectMake(0, 0, 20, 20)
+        buttonEdit.setImage(UIImage(named:"refresh.png"), forState: UIControlState.Normal)
+        buttonEdit.addTarget(self, action: Selector("endEditingNow"), forControlEvents: UIControlEvents.TouchUpInside)
+        var rightBarButtonItemEdit: UIBarButtonItem = UIBarButtonItem(customView: buttonEdit)
+        // self.navigationItem.rightBarButtonItem = rightBarButtonItemEdit
+        self.navigationItem.setRightBarButtonItems([rightBarButtonItemEdit], animated: true)
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
         let myCalendar = NSCalendar.currentCalendar() // (calendarIdentifier: NSCalendarIdentifierGregorian)
         
@@ -47,6 +148,9 @@ class ViewController: UIViewController,UIApplicationDelegate, CLLocationManagerD
         
         println(weekDay)
         Label.text = "Today is \(weekNumbers[weekDay-1]) \(days[myComponents.weekday-1]) of the Month"
+        
+        
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -58,26 +162,35 @@ class ViewController: UIViewController,UIApplicationDelegate, CLLocationManagerD
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        // self.initLocationManager()
         
-        
-        self.initLocationManager()
         
     }
+    
+    lazy var delegate: AppDelegate = {
+        let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        
+        return delegate
+        }()
+    
+
+    
     // Location Manager helper stuff
     func initLocationManager() {
         seenError = false
         locationFixAchieved = false
-        locationManager = CLLocationManager()
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        //delegate.locationManager = CLLocationManager()
+        //delegate.locationManager.delegate = self
+        //delegate.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         
-        locationManager.requestAlwaysAuthorization()
+        //delegate.locationManager.requestAlwaysAuthorization()
     }
     
     // Location Manager Delegate stuff
     
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
-        locationManager.stopUpdatingLocation()
+        //delegate.locationManager.stopUpdatingLocation()
         if ((error) != nil) {
             if (seenError == false) {
                 seenError = true
@@ -162,7 +275,7 @@ class ViewController: UIViewController,UIApplicationDelegate, CLLocationManagerD
         if (shouldIAllow == true) {
             NSLog("Location to Allowed")
             // Start location services
-            locationManager.startUpdatingLocation()
+            // delegate.locationManager.startUpdatingLocation()
         } else {
             NSLog("Denied access: \(locationStatus)")
         }
