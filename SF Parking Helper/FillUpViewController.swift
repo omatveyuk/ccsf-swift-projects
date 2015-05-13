@@ -12,9 +12,21 @@ protocol FooTwoViewControllerDelegate{
     func myVCDidFinish(controller:FillUpViewController,text:FillUp)
 }
 
-class FillUpViewController : UIViewController{
+class FillUpViewController : UIViewController, UITextFieldDelegate{
     
     var delegate:FooTwoViewControllerDelegate? = nil
+    
+    
+    @IBAction func PricePerGallonEditing(sender: UITextField) {
+        println("PricePerGallonEditing")
+        //numbers = Array(arrayLiteral: sender.text)
+    }
+    
+    @IBAction func TotalPricePaidEditing(sender: UITextField) {
+        //numbers = Array(arrayLiteral: sender.text)
+
+    }
+    
     
     @IBAction func Done(sender: UIButton) {
         
@@ -31,20 +43,90 @@ class FillUpViewController : UIViewController{
     @IBOutlet weak var totalPrice: UITextField!
     @IBOutlet weak var totalMiles: UITextField!
     
+    
+    // var numbers: [[String]] = [[]]
+    var numbers: [[String]] = [[],[]]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "cancelFillUp")
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Save, target: self, action: "saveFillUp")
+        
+        pricePerGallon.tag = 0
+        totalPrice.tag = 1
+        
+        pricePerGallon.delegate = self
+        totalPrice.delegate = self
     }
     
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        
+        var result = true
+        
+        if (textField.tag == 0 || textField.tag == 1){
+            
+            //$0.00
+            //$0.02
+            let disallowedCharacterSet = NSCharacterSet(charactersInString: "1234567890").invertedSet
+            let replacementStringIsLegal = string.rangeOfCharacterFromSet(disallowedCharacterSet) == nil
+            result = replacementStringIsLegal;
+            
+            if (replacementStringIsLegal)
+            {
+                if (string == "" && numbers[textField.tag].count > 0)
+                {
+                    numbers[textField.tag].removeLast()
+                }
+                if (string != "")
+                {
+                    numbers[textField.tag].append(string)
+                }
+                
+                let c = numbers[textField.tag].count
+                
+                if (c == 0)
+                {
+                    textField.text = "$0.00"
+                }
+                if (c == 1)
+                {
+                    textField.text = "$0.0" + numbers[textField.tag][0]
+                }
+                
+                if (c == 2)
+                {
+                    textField.text = "$0." + numbers[textField.tag][0] + numbers[textField.tag][1]
+                }
+                
+                if (c > 2)
+                {
+                    var t:String = "";
+                    t = "$"
+                    for i in 0..<numbers[textField.tag].count{
+                        if (i == numbers[textField.tag].count - 2)
+                        {
+                            t = t + "."
+                        }
+                        println(numbers[textField.tag][i])
+                        t = t + numbers[textField.tag][i]
+                    }
+                    textField.text = t;
+                }
+                
+            }
+            result = false;
+        }
+        return result
+    }
     
     func saveFillUp(){
         
         temp.timestamp = NSDate()
         temp.totalMiles=Double((totalMiles.text as NSString).doubleValue)
-        temp.totalPrice = Double((totalPrice.text as NSString).doubleValue)
-        temp.pricePerGallon = Double((pricePerGallon.text as NSString).doubleValue)
+        temp.totalPrice = Double((dropFirst(totalPrice.text) as NSString).doubleValue)
+        temp.pricePerGallon = Double((dropFirst(pricePerGallon.text) as NSString).doubleValue)
         
         var c:String = String(format:"%.2f", (temp.totalPrice / temp.totalMiles))
         
@@ -52,6 +134,8 @@ class FillUpViewController : UIViewController{
         
         println("Price per mile is \(temp.totalPrice / temp.totalMiles)")
         //dismissViewControllerAnimated(true, completion: nil)
+        
+        
         
         println("Save")
         if (delegate != nil) {
