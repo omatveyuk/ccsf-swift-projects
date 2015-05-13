@@ -11,6 +11,8 @@
 		EE3BC5B91B02F61E00DDFC1A /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE3BC5B81B02F61E00DDFC1A /* Storyboard.storyboard */; };
 		EE3BC5BC1B02F69100DDFC1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE3BC5BA1B02F69100DDFC1A /* Main.storyboard */; };
 		EE3BC5BF1B02FA0700DDFC1A /* FillUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3BC5BE1B02FA0700DDFC1A /* FillUp.swift */; };
+		EE3BC5C11B02FFCE00DDFC1A /* ActorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3BC5C01B02FFCE00DDFC1A /* ActorTableViewCell.swift */; };
+		EE3BC5C31B03004100DDFC1A /* TaskCancelingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3BC5C21B03004100DDFC1A /* TaskCancelingTableViewCell.swift */; };
 		EE6EDD331AEFD25B0075DB38 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = EE6EDD321AEFD25B0075DB38 /* refresh.png */; };
 		EE78E4891AEA81560002D5F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78E4881AEA81560002D5F4 /* AppDelegate.swift */; };
 		EE78E48B1AEA81560002D5F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78E48A1AEA81560002D5F4 /* ViewController.swift */; };
@@ -39,6 +41,8 @@
 		EE3BC5B81B02F61E00DDFC1A /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		EE3BC5BB1B02F69100DDFC1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE3BC5BE1B02FA0700DDFC1A /* FillUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillUp.swift; sourceTree = "<group>"; };
+		EE3BC5C01B02FFCE00DDFC1A /* ActorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorTableViewCell.swift; sourceTree = "<group>"; };
+		EE3BC5C21B03004100DDFC1A /* TaskCancelingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCancelingTableViewCell.swift; sourceTree = "<group>"; };
 		EE6EDD321AEFD25B0075DB38 /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
 		EE78E4831AEA81560002D5F4 /* SF Parking Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SF Parking Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE78E4871AEA81560002D5F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 				EEB725481AF309080089DC88 /* LocationManager.swift */,
 				EEC2F4C11B02EAD30022AF16 /* FillUpHistoryViewController.swift */,
 				EE3BC5B81B02F61E00DDFC1A /* Storyboard.storyboard */,
+				EE3BC5C01B02FFCE00DDFC1A /* ActorTableViewCell.swift */,
+				EE3BC5C21B03004100DDFC1A /* TaskCancelingTableViewCell.swift */,
 			);
 			path = "SF Parking Helper";
 			sourceTree = "<group>";
@@ -252,6 +258,8 @@
 				EEEAA2FC1AECA81100B1D0BF /* Question.swift in Sources */,
 				EE3BC5B11B02EF9400DDFC1A /* FillUpViewController.swift in Sources */,
 				EEB725491AF309080089DC88 /* LocationManager.swift in Sources */,
+				EE3BC5C31B03004100DDFC1A /* TaskCancelingTableViewCell.swift in Sources */,
+				EE3BC5C11B02FFCE00DDFC1A /* ActorTableViewCell.swift in Sources */,
 				EE78E48B1AEA81560002D5F4 /* ViewController.swift in Sources */,
 				EE78E4891AEA81560002D5F4 /* AppDelegate.swift in Sources */,
 				EEEAA2FA1AEC650200B1D0BF /* BingLocation-Constants.swift in Sources */,
