@@ -13,8 +13,8 @@ import CoreLocation
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    //var locationManager: CLLocationManager!
-
+    var history = [FillUp]()
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         return true
@@ -42,6 +42,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+
+    
+    
+    lazy var documentsDirectoryURL: NSURL = {
+        return NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0] as! NSURL
+        }()
+    
+    lazy var actorArrayFile: NSURL = {
+        return self.documentsDirectoryURL.URLByAppendingPathComponent("actorsFile")
+        }()
+    
+    var actorArrayURL: NSURL {
+        let filename = "favoriteActorsArray"
+        let documentsDirectoryURL: NSURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first as! NSURL
+        
+        return documentsDirectoryURL.URLByAppendingPathComponent(filename)
     }
 
 

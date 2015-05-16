@@ -15,7 +15,7 @@ class History : UIViewController, UITableViewDelegate, FooTwoViewControllerDeleg
     
     @IBOutlet weak var tableView: UITableView!
     
-    var history = [FillUp]()
+    //var history = [FillUp]()
 
     
     override func viewDidLoad() {
@@ -27,21 +27,16 @@ class History : UIViewController, UITableViewDelegate, FooTwoViewControllerDeleg
         
         self.navBar.items[0] = self.navItem
         
-        
-        if let fillUpHistoryArray = NSKeyedUnarchiver.unarchiveObjectWithFile(actorArrayFile.path!) as? [FillUp] {
-            history = fillUpHistoryArray
-        }
-        
     }
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return history.count
+        return delegate.history.count
     }
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let actor = history[indexPath.row]
+        let actor = delegate.history[indexPath.row]
         let CellIdentifier = "Cell"
         let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as! ActorTableViewCell
         
@@ -71,24 +66,17 @@ class History : UIViewController, UITableViewDelegate, FooTwoViewControllerDeleg
         // controller.navigationController?.popViewControllerAnimated(true)
         controller.dismissViewControllerAnimated(true, completion: nil)
         
-        self.history.append(text!)
+        self.delegate.history.append(text!)
         
         dispatch_async(dispatch_get_main_queue()) {
             self.tableView.reloadData()
         }
         
-        NSKeyedArchiver.archiveRootObject(self.history, toFile: actorArrayFile.path!)
+        NSKeyedArchiver.archiveRootObject(self.delegate.history, toFile: delegate.actorArrayFile.path!)
     }
     
     
-    lazy var documentsDirectoryURL: NSURL = {
-        return NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0] as! NSURL
-        }()
-    
-    lazy var actorArrayFile: NSURL = {
-        return self.documentsDirectoryURL.URLByAppendingPathComponent("actorsFile")
-        }()
-    
+        
     
     
     func addFillUp() {
@@ -105,11 +93,14 @@ class History : UIViewController, UITableViewDelegate, FooTwoViewControllerDeleg
         
     }
     
-    var actorArrayURL: NSURL {
-        let filename = "favoriteActorsArray"
-        let documentsDirectoryURL: NSURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first as! NSURL
+    
+    
+    lazy var delegate: AppDelegate = {
+        let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
-        return documentsDirectoryURL.URLByAppendingPathComponent(filename)
-    }
+        
+        return delegate
+        }()
+    
 
 }

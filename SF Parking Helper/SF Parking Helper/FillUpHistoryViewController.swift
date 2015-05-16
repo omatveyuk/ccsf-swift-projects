@@ -16,11 +16,11 @@ class FillUpHistoryViewController : UITableViewController, FooTwoViewControllerD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "addFillUp")
         
         if let fillUpHistoryArray = NSKeyedUnarchiver.unarchiveObjectWithFile(actorArrayFile.path!) as? [FillUp] {
-            history = fillUpHistoryArray
         }
 
     }
@@ -103,5 +103,14 @@ class FillUpHistoryViewController : UITableViewController, FooTwoViewControllerD
         
         return documentsDirectoryURL.URLByAppendingPathComponent(filename)
     }
+    
+    
+    lazy var delegate: AppDelegate = {
+        let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        
+        return delegate
+        }()
+
 
 }

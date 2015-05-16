@@ -18,6 +18,8 @@ extension BingLocationDB {
     
     struct Keys {
         static let ID = "id"
+        static let WAYPOINT0 = "wp.0"
+        static let WAYPOINT1 = "wp.1"
         static let ErrorStatusMessage = "status_message"
         static let ConfigBaseImageURL = "base_url"
         static let ConfigSecureBaseImageURL = "secure_base_url"
@@ -32,5 +34,6 @@ extension BingLocationDB {
         // MARK: - Movies
         static let MovieID = "movie/:id";
         static let SearchPerson = "Locations/:id";
+        static let GetDirections = "Routes/Driving/"
     }
 }

@@ -265,6 +265,20 @@
                                     <action selector="getTripCost:" destination="Tda-Ri-8QB" eventType="touchUpInside" id="2dx-s6-8T2"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xpJ-r9-b8v">
+                                <rect key="frame" x="24" y="228" width="272" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="z25-Aw-3R9">
+                                <rect key="frame" x="24" y="264" width="272" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -272,7 +286,9 @@
                     <connections>
                         <outlet property="button" destination="gMw-KU-cjo" id="kfJ-WE-FFT"/>
                         <outlet property="destination" destination="ct6-YF-pcd" id="7Vx-xh-enH"/>
+                        <outlet property="distanceBetweenPoints" destination="xpJ-r9-b8v" id="dzb-eP-PLS"/>
                         <outlet property="source" destination="wsg-G8-6pn" id="oYx-0f-otU"/>
+                        <outlet property="totalCost" destination="z25-Aw-3R9" id="gkZ-Mm-1eR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v5p-1h-aLo" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -29,6 +29,12 @@ class BingLocationDB : NSObject {
         // Add in the API Key
         mutableParameters["key"] = Constants.ApiKey
         mutableParameters["o"] = "json"
+        mutableParameters["distanceUnit"] = "mi"
+        
+        // mutableParameters["wp.0"] = "way_point_0"
+        // mutableParameters["wp.1"] = "way_point_1"
+
+        
         
         // Substitute the id parameter into the resource
         if resource.rangeOfString(":id") != nil {
