@@ -9,13 +9,16 @@
 import UIKit
 
 protocol FooTwoViewControllerDelegate{
-    func myVCDidFinish(controller:FillUpViewController,text:FillUp)
+    func myVCDidFinish(controller:FillUpViewController,text:FillUp?)
 }
 
 class FillUpViewController : UIViewController, UITextFieldDelegate{
     
     var delegate:FooTwoViewControllerDelegate? = nil
     
+    @IBOutlet weak var navBar: UINavigationBar!
+    
+    @IBOutlet weak var navItem: UINavigationItem!
     
     @IBAction func PricePerGallonEditing(sender: UITextField) {
         println("PricePerGallonEditing")
@@ -50,8 +53,19 @@ class FillUpViewController : UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "cancelFillUp")
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Save, target: self, action: "saveFillUp")
+        self.navItem.title = "Fillup details"
+        
+        self.navItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Save, target: self, action: "saveFillUp")
+        
+        
+        self.navBar.items[0] = self.navItem
+
+        // self.navItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Save, target: self, action: "cancelFillUp")
+        
+        // self.navBar.items[1] = self.navItem
+        
+        //self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "cancelFillUp")
+        //self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Save, target: self, action: "cancelFillUp")
         
         pricePerGallon.tag = 0
         totalPrice.tag = 1
@@ -119,6 +133,15 @@ class FillUpViewController : UIViewController, UITextFieldDelegate{
             result = false;
         }
         return result
+    }
+    
+    
+    
+    
+    @IBAction func cancelFillUp(sender : UIBarButtonItem) {
+        if (delegate != nil) {
+            delegate!.myVCDidFinish(self, text: nil)
+        }
     }
     
     func saveFillUp(){

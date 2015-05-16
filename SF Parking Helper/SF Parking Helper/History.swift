@@ -1,40 +1,46 @@
 //
-//  FillUpController.swift
+//  History.swift
 //  SF Parking Helper
 //
-//  Created by misha birman1 on 5/12/15.
+//  Created by misha birman1 on 5/16/15.
 //  Copyright (c) 2015 misha birman. All rights reserved.
 //
 
 import UIKit
+class History : UIViewController, UITableViewDelegate, FooTwoViewControllerDelegate {
 
-
-
-class FillUpHistoryViewController : UITableViewController, FooTwoViewControllerDelegate{
+    @IBOutlet weak var navBar: UINavigationBar!
+    
+    @IBOutlet weak var navItem: UINavigationItem!
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     var history = [FillUp]()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib
         
-        self.navigationItem.leftBarButtonItem = self.editButtonItem()
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "addFillUp")
+        self.navItem.title = "Fillup history"
+        self.navItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "addFillUp")
+        
+        self.navBar.items[0] = self.navItem
+        
         
         if let fillUpHistoryArray = NSKeyedUnarchiver.unarchiveObjectWithFile(actorArrayFile.path!) as? [FillUp] {
             history = fillUpHistoryArray
         }
-
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
         
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return history.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let actor = history[indexPath.row]
         let CellIdentifier = "Cell"
         let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as! ActorTableViewCell
@@ -47,10 +53,10 @@ class FillUpHistoryViewController : UITableViewController, FooTwoViewControllerD
         
         //let flags: NSCalendarUnit = .DayCalendarUnit | .MonthCalendarUnit | .YearCalendarUnit
         // let components = NSCalendar.currentCalendar().components(myComponents, fromDate: actor.timestamp)
-
+        
         
         cell.timestampLabel.text = "Fillup date: \(components.month)-\(components.day)-\(components.year)"
-
+        
         
         cell.namedLabel.text = "Miles: \(actor.totalMiles) \t Price per mile: $" + String(format:"%.1f", (actor.totalPrice / actor.totalMiles))
         cell.totalGallons.text = "Price: $\(actor.totalPrice) \t Gallons: " + String(format: "%.2f", (actor.totalPrice / actor.pricePerGallon))
@@ -58,17 +64,19 @@ class FillUpHistoryViewController : UITableViewController, FooTwoViewControllerD
         return cell
     }
     
+
     
     func myVCDidFinish(controller: FillUpViewController, text: FillUp?) {
         println("The Color is \(text!.totalMiles)")
-        controller.navigationController?.popViewControllerAnimated(true)
+        // controller.navigationController?.popViewControllerAnimated(true)
+        controller.dismissViewControllerAnimated(true, completion: nil)
         
         self.history.append(text!)
         
         dispatch_async(dispatch_get_main_queue()) {
             self.tableView.reloadData()
         }
-
+        
         NSKeyedArchiver.archiveRootObject(self.history, toFile: actorArrayFile.path!)
     }
     
@@ -81,7 +89,7 @@ class FillUpHistoryViewController : UITableViewController, FooTwoViewControllerD
         return self.documentsDirectoryURL.URLByAppendingPathComponent("actorsFile")
         }()
     
-
+    
     
     func addFillUp() {
         
@@ -91,9 +99,9 @@ class FillUpHistoryViewController : UITableViewController, FooTwoViewControllerD
         
         controller.delegate = self
         
-        // self.presentViewController(controller, animated: true, completion: nil)
+        self.presentViewController(controller, animated: true, completion: nil)
         //presentViewController(controller, animated: true, completion: nil)
-        self.navigationController!.pushViewController(controller, animated: true)
+        // self.navigationController!.pushViewController(controller, animated: true)
         
     }
     
