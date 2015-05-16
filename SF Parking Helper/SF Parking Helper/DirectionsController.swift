@@ -16,5 +16,11 @@ class DirectionsController :UIViewController {
     @IBOutlet weak var source: UITextField!
     
     @IBOutlet weak var destination: UITextField!
+    
+    @IBAction func getTripCost(sender: UIButton) {
+        println("PricePerGallonEditing")
+        //numbers = Array(arrayLiteral: sender.text)
+    }
+
 
 }
