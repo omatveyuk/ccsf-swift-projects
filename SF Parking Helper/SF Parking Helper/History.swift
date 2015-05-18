@@ -15,6 +15,7 @@ class History : UIViewController, UITableViewDelegate, FooTwoViewControllerDeleg
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var Average: UILabel!
     //var history = [FillUp]()
 
     
@@ -27,6 +28,22 @@ class History : UIViewController, UITableViewDelegate, FooTwoViewControllerDeleg
         
         self.navBar.items[0] = self.navItem
         
+        computeAverages()
+        
+        
+    }
+    
+    private func computeAverages (){
+        // calculate averages
+        var average = 0.0
+        var count = delegate.history.count
+        if count > 0 {
+            for a in delegate.history{
+                average = average + (a.totalPrice / a.totalMiles)
+            }
+            average = average / Double(count)
+            self.Average.text = "$" + String(format:"%.2f", average)
+        }
     }
     
     
@@ -36,9 +53,13 @@ class History : UIViewController, UITableViewDelegate, FooTwoViewControllerDeleg
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let actor = delegate.history[indexPath.row]
+        // let actor = delegate.history[indexPath.row]
         let CellIdentifier = "Cell"
         let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as! ActorTableViewCell
+        
+        
+        var idx = delegate.history[delegate.history.count - (indexPath.row+1)];
+        var actor = idx
         
         //cell.textLabel?.text = (actor.totalPrice / actor.totalMiles).description
         
@@ -53,7 +74,7 @@ class History : UIViewController, UITableViewDelegate, FooTwoViewControllerDeleg
         cell.timestampLabel.text = "Fillup date: \(components.month)-\(components.day)-\(components.year)"
         
         
-        cell.namedLabel.text = "Miles: \(actor.totalMiles) \t Price per mile: $" + String(format:"%.1f", (actor.totalPrice / actor.totalMiles))
+        cell.namedLabel.text = "Miles: \(actor.totalMiles) \t Price per mile: $" + String(format:"%.2f", (actor.totalPrice / actor.totalMiles))
         cell.totalGallons.text = "Price: $\(actor.totalPrice) \t Gallons: " + String(format: "%.2f", (actor.totalPrice / actor.pricePerGallon))
         
         return cell
@@ -70,6 +91,7 @@ class History : UIViewController, UITableViewDelegate, FooTwoViewControllerDeleg
         
         dispatch_async(dispatch_get_main_queue()) {
             self.tableView.reloadData()
+            self.computeAverages()
         }
         
         NSKeyedArchiver.archiveRootObject(self.delegate.history, toFile: delegate.actorArrayFile.path!)
