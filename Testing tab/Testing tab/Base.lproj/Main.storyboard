@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8k2-ak-kHG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8k2-ak-kHG">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
@@ -49,11 +50,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="97" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7ue-YF-NcO">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="79" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7ue-YF-NcO">
                                 <rect key="frame" x="0.0" y="165" width="320" height="346"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="97" id="BLa-0t-BGB" customClass="ActorTableViewCell" customModule="Testing_tab" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="79" id="BLa-0t-BGB" customClass="ActorTableViewCell" customModule="Testing_tab" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BLa-0t-BGB" id="JFM-YE-6Bt">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -95,7 +96,7 @@
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="22"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7k-bW-BV7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7k-bW-BV7">
                                 <rect key="frame" x="126" y="100" width="69" height="77"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="27"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -103,6 +104,12 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7ue-YF-NcO" firstAttribute="leading" secondItem="R5N-vQ-sI7" secondAttribute="leadingMargin" constant="-16" id="4OX-Lt-zGy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7ue-YF-NcO" secondAttribute="trailing" constant="-16" id="cHi-xt-kel"/>
+                            <constraint firstItem="y7k-bW-BV7" firstAttribute="leading" secondItem="R5N-vQ-sI7" secondAttribute="leadingMargin" constant="110" id="haR-zt-JKg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="y7k-bW-BV7" secondAttribute="trailing" constant="109" id="r3k-Jo-ljJ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="43k-ml-LDV"/>
                     <connections>
@@ -268,17 +275,17 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="413 Los Palmos Drive San Francisco, CA 94127" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IdR-dN-FHh">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="413 Los Palmos Drive San Francisco, CA 94127" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IdR-dN-FHh">
                                 <rect key="frame" x="10" y="122" width="301" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1020 Enterprise Way, Sunnyvale CA 94089" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QTQ-kY-Y5p" colorLabel="IBBuiltInLabel-Yellow">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1020 Enterprise Way, Sunnyvale CA 94089" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QTQ-kY-Y5p" colorLabel="IBBuiltInLabel-Yellow">
                                 <rect key="frame" x="10" y="194" width="301" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fW6-J2-5NI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fW6-J2-5NI">
                                 <rect key="frame" x="24" y="302" width="272" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -290,7 +297,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3d-Ga-xrz">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3d-Ga-xrz">
                                 <rect key="frame" x="111" y="237" width="98" height="30"/>
                                 <state key="normal" title="Calculate cost">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -301,6 +308,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="IdR-dN-FHh" secondAttribute="trailing" constant="-7" id="DM1-bD-yj6"/>
+                            <constraint firstItem="QTQ-kY-Y5p" firstAttribute="leading" secondItem="Cwx-n5-yFV" secondAttribute="leadingMargin" constant="-6" id="Qhl-X3-zFC"/>
+                            <constraint firstItem="fW6-J2-5NI" firstAttribute="top" secondItem="y3d-Ga-xrz" secondAttribute="bottom" constant="135" id="TgA-U5-KbB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QTQ-kY-Y5p" secondAttribute="trailing" constant="-7" id="g5U-Oa-znC"/>
+                            <constraint firstItem="IdR-dN-FHh" firstAttribute="leading" secondItem="Cwx-n5-yFV" secondAttribute="leadingMargin" constant="-6" id="w00-W8-GSC"/>
+                            <constraint firstAttribute="centerY" secondItem="y3d-Ga-xrz" secondAttribute="centerY" constant="32" id="yRe-Va-YAI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8Wk-Qc-tl7"/>
                     <connections>

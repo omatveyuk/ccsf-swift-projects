@@ -14,6 +14,7 @@
 		EE2545B01B0C1317006AA461 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE2545AF1B0C1317006AA461 /* Images.xcassets */; };
 		EE2545B31B0C1317006AA461 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE2545B11B0C1317006AA461 /* LaunchScreen.xib */; };
 		EE2545BF1B0C1317006AA461 /* Testing_tabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2545BE1B0C1317006AA461 /* Testing_tabTests.swift */; };
+		EEA38AF91B0CC35A0045977E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA38AF81B0CC35A0045977E /* LocationManager.swift */; };
 		EEAFD9F91B0C4DFC003B5C0D /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAFD9F11B0C4DFC003B5C0D /* HistoryController.swift */; };
 		EEAFD9FA1B0C4DFC003B5C0D /* DirectionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAFD9F21B0C4DFC003B5C0D /* DirectionsController.swift */; };
 		EEAFD9FB1B0C4DFC003B5C0D /* FillUpHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAFD9F31B0C4DFC003B5C0D /* FillUpHistoryViewController.swift */; };
@@ -47,6 +48,7 @@
 		EE2545B81B0C1317006AA461 /* Testing tabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Testing tabTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE2545BD1B0C1317006AA461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE2545BE1B0C1317006AA461 /* Testing_tabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing_tabTests.swift; sourceTree = "<group>"; };
+		EEA38AF81B0CC35A0045977E /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		EEAFD9F11B0C4DFC003B5C0D /* HistoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
 		EEAFD9F21B0C4DFC003B5C0D /* DirectionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsController.swift; sourceTree = "<group>"; };
 		EEAFD9F31B0C4DFC003B5C0D /* FillUpHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillUpHistoryViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		EE2545A31B0C1317006AA461 /* Testing tab */ = {
 			isa = PBXGroup;
 			children = (
+				EEA38AF81B0CC35A0045977E /* LocationManager.swift */,
 				EEAFDA011B0C4EBD003B5C0D /* FillUpViewController.swift */,
 				EEAFD9F11B0C4DFC003B5C0D /* HistoryController.swift */,
 				EEAFD9F21B0C4DFC003B5C0D /* DirectionsController.swift */,
@@ -254,6 +257,7 @@
 				EE2545A91B0C1317006AA461 /* FirstViewController.swift in Sources */,
 				EEAFD9FB1B0C4DFC003B5C0D /* FillUpHistoryViewController.swift in Sources */,
 				EEAFD9FE1B0C4DFC003B5C0D /* FillUp.swift in Sources */,
+				EEA38AF91B0CC35A0045977E /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

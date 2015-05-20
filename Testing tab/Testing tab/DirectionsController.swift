@@ -65,7 +65,9 @@ class DirectionsController :UIViewController {
             
             // Handle the error case
             if let error = error {
-                println("Error searching for actors: \(error.localizedDescription)")
+                let networkIssueController = UIAlertController(title: "Error", message: "Unable to load data. Connectivity error", preferredStyle: .Alert)
+                
+                self.presentViewController(networkIssueController, animated: true, completion: nil)
                 return
             }
             

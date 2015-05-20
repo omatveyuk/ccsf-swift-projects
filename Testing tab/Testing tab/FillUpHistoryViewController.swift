@@ -51,6 +51,21 @@ class FillUpHistoryViewController : UIViewController, UITableViewDelegate,  FooT
             average = average / Double(count)
             self.Average.text = "$" + String(format:"%.2f", average)
         }
+        else{
+            let networkIssueController = UIAlertController(title: "Error", message: "No Data Available.", preferredStyle: .Alert)
+            let okButton = UIAlertAction    (title: "Enter data", style: .Default, handler: { action -> Void in
+                //Code for launching the camera goes here
+                self.addFillUp()
+            })
+            networkIssueController.addAction(okButton)
+            
+            
+            let cancelButton = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+            networkIssueController.addAction(cancelButton)
+            
+            self.presentViewController(networkIssueController, animated: true, completion: nil)
+
+        }
     }
     
     
