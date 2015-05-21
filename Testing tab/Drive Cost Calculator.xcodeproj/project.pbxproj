@@ -38,9 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EE2545A11B0C1317006AA461 /* Testing tab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Testing tab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE2545A11B0C1317006AA461 /* Drive Cost Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Drive Cost Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE2545A51B0C1317006AA461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EE2545A61B0C1317006AA461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE2545A61B0C1317006AA461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Testing tab/AppDelegate.swift"; sourceTree = "<group>"; };
 		EE2545A81B0C1317006AA461 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		EE2545AA1B0C1317006AA461 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		EE2545AD1B0C1317006AA461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,9 +54,9 @@
 		EEAFD9F11B0C4DFC003B5C0D /* HistoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
 		EEAFD9F21B0C4DFC003B5C0D /* DirectionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsController.swift; sourceTree = "<group>"; };
 		EEAFD9F31B0C4DFC003B5C0D /* FillUpHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillUpHistoryViewController.swift; sourceTree = "<group>"; };
-		EEAFD9F41B0C4DFC003B5C0D /* BingLocationDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingLocationDB.swift; sourceTree = "<group>"; };
+		EEAFD9F41B0C4DFC003B5C0D /* BingLocationDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BingLocationDB.swift; path = "Testing tab/BingLocationDB.swift"; sourceTree = "<group>"; };
 		EEAFD9F51B0C4DFC003B5C0D /* BingLocation-Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BingLocation-Constants.swift"; sourceTree = "<group>"; };
-		EEAFD9F61B0C4DFC003B5C0D /* FillUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillUp.swift; sourceTree = "<group>"; };
+		EEAFD9F61B0C4DFC003B5C0D /* FillUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FillUp.swift; path = "Testing tab/FillUp.swift"; sourceTree = "<group>"; };
 		EEAFD9F71B0C4DFC003B5C0D /* ActorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorTableViewCell.swift; sourceTree = "<group>"; };
 		EEAFD9F81B0C4DFC003B5C0D /* TaskCancelingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCancelingTableViewCell.swift; sourceTree = "<group>"; };
 		EEAFDA011B0C4EBD003B5C0D /* FillUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillUpViewController.swift; sourceTree = "<group>"; };
@@ -83,7 +83,8 @@
 		EE2545981B0C1317006AA461 = {
 			isa = PBXGroup;
 			children = (
-				EE84D57D1B0D9D9500CB76C7 /* ProximaNova-Light.otf */,
+				EEFD96ED1B0E9984005495D5 /* Models */,
+				EEFD96EC1B0E9979005495D5 /* Fonts */,
 				EE2545A31B0C1317006AA461 /* Testing tab */,
 				EE2545BB1B0C1317006AA461 /* Testing tabTests */,
 				EE2545A21B0C1317006AA461 /* Products */,
@@ -93,7 +94,7 @@
 		EE2545A21B0C1317006AA461 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EE2545A11B0C1317006AA461 /* Testing tab.app */,
+				EE2545A11B0C1317006AA461 /* Drive Cost Calculator.app */,
 				EE2545B81B0C1317006AA461 /* Testing tabTests.xctest */,
 			);
 			name = Products;
@@ -107,12 +108,9 @@
 				EEAFD9F11B0C4DFC003B5C0D /* HistoryController.swift */,
 				EEAFD9F21B0C4DFC003B5C0D /* DirectionsController.swift */,
 				EEAFD9F31B0C4DFC003B5C0D /* FillUpHistoryViewController.swift */,
-				EEAFD9F41B0C4DFC003B5C0D /* BingLocationDB.swift */,
 				EEAFD9F51B0C4DFC003B5C0D /* BingLocation-Constants.swift */,
-				EEAFD9F61B0C4DFC003B5C0D /* FillUp.swift */,
 				EEAFD9F71B0C4DFC003B5C0D /* ActorTableViewCell.swift */,
 				EEAFD9F81B0C4DFC003B5C0D /* TaskCancelingTableViewCell.swift */,
-				EE2545A61B0C1317006AA461 /* AppDelegate.swift */,
 				EE2545A81B0C1317006AA461 /* FirstViewController.swift */,
 				EE2545AA1B0C1317006AA461 /* SecondViewController.swift */,
 				EE2545AC1B0C1317006AA461 /* Main.storyboard */,
@@ -148,6 +146,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EEFD96EC1B0E9979005495D5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EE84D57D1B0D9D9500CB76C7 /* ProximaNova-Light.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		EEFD96ED1B0E9984005495D5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EEAFD9F41B0C4DFC003B5C0D /* BingLocationDB.swift */,
+				EE2545A61B0C1317006AA461 /* AppDelegate.swift */,
+				EEAFD9F61B0C4DFC003B5C0D /* FillUp.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,7 +181,7 @@
 			);
 			name = "Testing tab";
 			productName = "Testing tab";
-			productReference = EE2545A11B0C1317006AA461 /* Testing tab.app */;
+			productReference = EE2545A11B0C1317006AA461 /* Drive Cost Calculator.app */;
 			productType = "com.apple.product-type.application";
 		};
 		EE2545B71B0C1317006AA461 /* Testing tabTests */ = {
@@ -204,7 +220,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EE25459C1B0C1317006AA461 /* Build configuration list for PBXProject "Testing tab" */;
+			buildConfigurationList = EE25459C1B0C1317006AA461 /* Build configuration list for PBXProject "Drive Cost Calculator" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -390,7 +406,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Testing tab/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Drive Cost Calculator";
 			};
 			name = Debug;
 		};
@@ -400,7 +416,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Testing tab/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Drive Cost Calculator";
 			};
 			name = Release;
 		};
@@ -441,7 +457,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EE25459C1B0C1317006AA461 /* Build configuration list for PBXProject "Testing tab" */ = {
+		EE25459C1B0C1317006AA461 /* Build configuration list for PBXProject "Drive Cost Calculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EE2545C01B0C1317006AA461 /* Debug */,

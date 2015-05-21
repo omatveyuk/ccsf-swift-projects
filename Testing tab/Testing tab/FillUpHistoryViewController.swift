@@ -52,6 +52,7 @@ class FillUpHistoryViewController : UIViewController, UITableViewDelegate,  FooT
             self.Average.text = "$" + String(format:"%.2f", average) + " per mile"
         }
         else{
+            self.Average.text = "Not enough data"
             let networkIssueController = UIAlertController(title: "Error", message: "No Data Available.", preferredStyle: .Alert)
             let okButton = UIAlertAction    (title: "Enter data", style: .Default, handler: { action -> Void in
                 //Code for launching the camera goes here

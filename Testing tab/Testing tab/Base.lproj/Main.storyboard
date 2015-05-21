@@ -31,11 +31,11 @@
             </objects>
             <point key="canvasLocation" x="-1010" y="-76"/>
         </scene>
-        <!--Fill Up History-->
+        <!--Fill Up Activity-->
         <scene sceneID="inV-Qf-vXt">
             <objects>
                 <navigationController id="g3z-KL-zP0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Fill Up History" image="Image" id="HII-Lf-mPS"/>
+                    <tabBarItem key="tabBarItem" title="Fill Up Activity" image="Image" id="HII-Lf-mPS"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="a9O-OQ-Xpa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -52,7 +52,7 @@
         <!--Fill Up History View Controller-->
         <scene sceneID="JNj-zN-BlK">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="x00-5x-WlG" customClass="FillUpHistoryViewController" customModule="Testing_tab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="x00-5x-WlG" customClass="FillUpHistoryViewController" customModule="Drive_Cost_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JdN-pU-doz"/>
                         <viewControllerLayoutGuide type="bottom" id="eqv-b1-kST"/>
@@ -65,7 +65,7 @@
                                 <rect key="frame" x="0.0" y="148" width="320" height="371"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="79" id="BLa-0t-BGB" customClass="ActorTableViewCell" customModule="Testing_tab" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="79" id="BLa-0t-BGB" customClass="ActorTableViewCell" customModule="Drive_Cost_Calculator" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BLa-0t-BGB" id="JFM-YE-6Bt">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -136,7 +136,7 @@
         <!--Fill Up View Controller-->
         <scene sceneID="etj-co-pY6">
             <objects>
-                <viewController storyboardIdentifier="FillUpViewController" id="4as-Zr-0Ms" customClass="FillUpViewController" customModule="Testing_tab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FillUpViewController" id="4as-Zr-0Ms" customClass="FillUpViewController" customModule="Drive_Cost_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YIL-uV-Eau"/>
                         <viewControllerLayoutGuide type="bottom" id="5pr-Ag-kQv"/>
@@ -270,7 +270,7 @@
         <!--Directions Controller-->
         <scene sceneID="T9w-HH-mGa">
             <objects>
-                <viewController id="Uw8-ZI-eHb" customClass="DirectionsController" customModule="Testing_tab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Uw8-ZI-eHb" customClass="DirectionsController" customModule="Drive_Cost_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ASo-wp-hJj"/>
                         <viewControllerLayoutGuide type="bottom" id="Rej-Ld-hvB"/>
