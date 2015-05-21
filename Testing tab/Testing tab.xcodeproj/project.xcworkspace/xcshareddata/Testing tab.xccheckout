@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>CAF248E5-38E8-4E24-B39B-9686E116C27B</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Testing tab</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>18B7ECFC4D457DC2C3BFA0B89DD79DACE9638373</key>
 		<string>https://github.com/omatveyuk/ccsf-swift-projects.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Testing tab/Testing tab.xcodeproj/project.xcworkspace</string>
+	<string>Testing tab/Testing tab.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>18B7ECFC4D457DC2C3BFA0B89DD79DACE9638373</key>

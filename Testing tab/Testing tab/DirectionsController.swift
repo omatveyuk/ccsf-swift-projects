@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DirectionsController :UIViewController {
+class DirectionsController :UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var totalCost: UILabel!
@@ -32,8 +32,18 @@ class DirectionsController :UIViewController {
         if let fillUpHistoryArray = NSKeyedUnarchiver.unarchiveObjectWithFile(delegate.actorArrayFile.path!) as? [FillUp] {
             delegate.history = fillUpHistoryArray
         }
+        
+        destination.delegate = self
+        source.delegate = self
     }
     
+    
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool // called when 'return' key pressed. return NO to ignore.
+    {
+        textField.resignFirstResponder()
+        return true;
+    }
     
     lazy var delegate: AppDelegate = {
         let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -46,6 +56,21 @@ class DirectionsController :UIViewController {
     @IBAction func getTripCost(sender: UIButton) {
         println("PricePerGallonEditing")
     
+        if (self.delegate.history.count == 0) {
+            let networkIssueController = UIAlertController(title: "Error", message: "Unable to calclate cost. Not enough data", preferredStyle: .Alert)
+            
+            let okButton = UIAlertAction    (title: "Ok", style: .Default, handler: nil)
+            networkIssueController.addAction(okButton)
+            
+            
+            let cancelButton = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+            networkIssueController.addAction(cancelButton)
+
+            
+            self.presentViewController(networkIssueController, animated: true, completion: nil)
+            return
+
+        }
         
         // http://dev.virtualearth.net/REST/V1/Routes/Driving?wp.0=413+los+Palmos+drive+san+francisco%2Cca&wp.1=728+elm+street+san+carlos%2Cca&avoid=minimizeTolls&key=Aoz5aNfanNaMxDdBD87NokA3PUMtrCcG-sxAZIxsCaKaE7oqrHaisGbXNBYMiNw2
     
@@ -88,6 +113,7 @@ class DirectionsController :UIViewController {
                     }
                 }
             }
+            
         }
     }
 }
