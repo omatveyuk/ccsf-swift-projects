@@ -42,7 +42,7 @@ class HistoryController : UIViewController, UITableViewDelegate, FooTwoViewContr
                 average = average + (a.totalPrice / a.totalMiles)
             }
             average = average / Double(count)
-            self.Average.text = "$" + String(format:"%.2f", average)
+            self.Average.text = "$" + String(format:"%.2f", average) + "per mile"
         }
     }
     

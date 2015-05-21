@@ -14,6 +14,7 @@
 		EE2545B01B0C1317006AA461 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE2545AF1B0C1317006AA461 /* Images.xcassets */; };
 		EE2545B31B0C1317006AA461 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE2545B11B0C1317006AA461 /* LaunchScreen.xib */; };
 		EE2545BF1B0C1317006AA461 /* Testing_tabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2545BE1B0C1317006AA461 /* Testing_tabTests.swift */; };
+		EE84D57E1B0D9D9500CB76C7 /* ProximaNova-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE84D57D1B0D9D9500CB76C7 /* ProximaNova-Light.otf */; };
 		EEA38AF91B0CC35A0045977E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA38AF81B0CC35A0045977E /* LocationManager.swift */; };
 		EEAFD9F91B0C4DFC003B5C0D /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAFD9F11B0C4DFC003B5C0D /* HistoryController.swift */; };
 		EEAFD9FA1B0C4DFC003B5C0D /* DirectionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAFD9F21B0C4DFC003B5C0D /* DirectionsController.swift */; };
@@ -48,6 +49,7 @@
 		EE2545B81B0C1317006AA461 /* Testing tabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Testing tabTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE2545BD1B0C1317006AA461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE2545BE1B0C1317006AA461 /* Testing_tabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing_tabTests.swift; sourceTree = "<group>"; };
+		EE84D57D1B0D9D9500CB76C7 /* ProximaNova-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Light.otf"; sourceTree = "<group>"; };
 		EEA38AF81B0CC35A0045977E /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		EEAFD9F11B0C4DFC003B5C0D /* HistoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
 		EEAFD9F21B0C4DFC003B5C0D /* DirectionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		EE2545981B0C1317006AA461 = {
 			isa = PBXGroup;
 			children = (
+				EE84D57D1B0D9D9500CB76C7 /* ProximaNova-Light.otf */,
 				EE2545A31B0C1317006AA461 /* Testing tab */,
 				EE2545BB1B0C1317006AA461 /* Testing tabTests */,
 				EE2545A21B0C1317006AA461 /* Products */,
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE2545AE1B0C1317006AA461 /* Main.storyboard in Resources */,
+				EE84D57E1B0D9D9500CB76C7 /* ProximaNova-Light.otf in Resources */,
 				EE2545B31B0C1317006AA461 /* LaunchScreen.xib in Resources */,
 				EE2545B01B0C1317006AA461 /* Images.xcassets in Resources */,
 			);

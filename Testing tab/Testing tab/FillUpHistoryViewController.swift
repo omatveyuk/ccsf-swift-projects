@@ -21,7 +21,7 @@ class FillUpHistoryViewController : UIViewController, UITableViewDelegate,  FooT
         super.viewDidLoad()
         
         
-        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        // self.navigationItem.leftBarButtonItem = self.editButtonItem()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "addFillUp")
         
     
@@ -49,7 +49,7 @@ class FillUpHistoryViewController : UIViewController, UITableViewDelegate,  FooT
                 average = average + (a.totalPrice / a.totalMiles)
             }
             average = average / Double(count)
-            self.Average.text = "$" + String(format:"%.2f", average)
+            self.Average.text = "$" + String(format:"%.2f", average) + " per mile"
         }
         else{
             let networkIssueController = UIAlertController(title: "Error", message: "No Data Available.", preferredStyle: .Alert)
