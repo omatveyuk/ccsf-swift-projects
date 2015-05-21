@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F311815A-5261-4A8C-92C3-AE8FF939204C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>18B7ECFC4D457DC2C3BFA0B89DD79DACE9638373</key>
+		<string>https://github.com/omatveyuk/ccsf-swift-projects.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Testing tab/Drive Cost Calculator.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>18B7ECFC4D457DC2C3BFA0B89DD79DACE9638373</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/omatveyuk/ccsf-swift-projects.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>18B7ECFC4D457DC2C3BFA0B89DD79DACE9638373</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>18B7ECFC4D457DC2C3BFA0B89DD79DACE9638373</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ccsf-swift-projects</string>
+		</dict>
+	</array>
+</dict>
+</plist>
