@@ -45,10 +45,17 @@ class FillUpHistoryViewController : UIViewController, UITableViewDelegate,  FooT
         var average = 0.0
         var count = delegate.history.count
         if count > 0 {
-            for a in delegate.history{
-                average = average + (a.totalPrice / a.totalMiles)
+            
+            for var index = 0; index < count-1; index++ {
+                average = average + (delegate.history[index].totalPrice / delegate.history[index+1].totalMiles)
+
+                print("index is \(delegate.history[index+1].totalMiles)")
             }
-            average = average / Double(count)
+            
+            //for a in delegate.history{
+            //    average = average + (a.totalPrice / a.totalMiles)
+            //}
+            average = average / Double(count-1)
             self.Average.text = "$" + String(format:"%.2f", average) + " per mile"
         }
         else{
@@ -79,6 +86,18 @@ class FillUpHistoryViewController : UIViewController, UITableViewDelegate,  FooT
         // let actor = delegate.history[indexPath.row]
         
         var idx = delegate.history[delegate.history.count - (indexPath.row+1)];
+        var idx2:FillUp?
+        
+        if (indexPath.row > 0){
+            idx2 = delegate.history[delegate.history.count - (indexPath.row)];
+        }
+        
+        println(indexPath.row)
+        
+        println(delegate.history.count - (indexPath.row+1))
+        
+        println(delegate.history.count - (indexPath.row+2))
+        
         var actor = idx
         
         let CellIdentifier = "Cell"
@@ -96,9 +115,14 @@ class FillUpHistoryViewController : UIViewController, UITableViewDelegate,  FooT
         
         cell.timestampLabel.text = "Fillup date: \(components.month)-\(components.day)-\(components.year)"
 
+        if let idx2 = idx2 {
+            println("got data \(idx2.totalMiles)")
+            cell.namedLabel.text = "Miles: \(idx2.totalMiles) \t Price per mile: $" + String(format:"%.2f", (idx.totalPrice / idx2.totalMiles))
+            
+            
+        }
         
-        cell.namedLabel.text = "Miles: \(actor.totalMiles) \t Price per mile: $" + String(format:"%.2f", (actor.totalPrice / actor.totalMiles))
-        cell.totalGallons.text = "Price: $\(actor.totalPrice) \t Gallons: " + String(format: "%.2f", (actor.totalPrice / actor.pricePerGallon))
+        cell.totalGallons.text = "Price: $\(actor.totalPrice) \t Gallons: " + String(format: "%.2f", (actor.totalPrice / actor.pricePerGallon)) + " ($" + String(format: "%.2f", (actor.pricePerGallon)) + ")"
         
         return cell
     }
